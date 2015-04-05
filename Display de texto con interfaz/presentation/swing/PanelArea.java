@@ -15,7 +15,7 @@ public class PanelArea extends JPanel{
 	public PanelArea(Events events){
 		this.eventsObj = events;
 		this.setLayout(new GridLayout());
-		this.panelDisplay = new PanelDisplay();
+		this.panelDisplay = new PanelDisplay("Display");
 		this.add(panelDisplay);
 		
 		this.buttonSendLetter = new JButton("Enviar letras");

@@ -1,5 +1,10 @@
 package logic;
 
+import console.ConsoleLetter;
+import functional.ALetter;
+import functional.Letter;
+import functional.Parameters;
+
 public class TextPosition {
 	public static final int LIMIT = 200;
 	private String text;
@@ -35,15 +40,24 @@ public class TextPosition {
 			array[i] = new PositionLetter(text.charAt(i), (int)(Math.random()*maxX), (int)(Math.random()*maxY));
 		}
 	}
+	public void generateDisplay(){
+		Parameters parametersObjA = new Parameters(5, 5, '*');
+		Letter letterObjA = new ALetter(parametersObjA);
+		for (int i = 0; i < array.length;i++) {
+				array[i] = new PositionLetter(text.charAt(0), maxX/2, maxY/2);
+				letterObjA.generate();
+				ConsoleLetter.print(letterObjA);
+		}
+	}
 	public void move(){
 		for (int i = 0; i < array.length; i++) {
 			array[i].move();
 		}
 	}
 
-	public void setText(String text) {
-		this.text = text;	
-		array = new PositionLetter[text.length()];
+	public void setText(String t) {
+		this.text = t;	
+		array = new PositionLetter[t.length()];
 		
 	}
 

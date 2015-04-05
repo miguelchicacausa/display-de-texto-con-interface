@@ -7,13 +7,13 @@ import logic.PositionLetter;
 import logic.TextPosition;
 
 public class PanelLetter extends JPanel implements Runnable{
-	public static final int SIZE_LETTER = 40;
+	public static final int SIZE_LETTER = 100;
 	private JLabel[] arrayLabels;
 	private TextPosition textPositionObj;
 	
 	public PanelLetter() {
 		setLayout(null);
-		textPositionObj = new TextPosition("Demo de panelLetter");
+		textPositionObj = new TextPosition(".");
 		textPositionObj.generate();
 		fillArrayLabels();
 	}
@@ -74,4 +74,4 @@ public class PanelLetter extends JPanel implements Runnable{
 			arrayThreadObj[i].start();
 		}
 	}
-}// las letras deben arrancar pa todo lado, diferente velocidad c/u, boton que arranque y detenga el hilo
+}// las 

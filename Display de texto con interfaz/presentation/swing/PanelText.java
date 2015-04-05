@@ -43,4 +43,3 @@ public class PanelText extends JPanel{
 			return textText;
 		}
 	}
-
